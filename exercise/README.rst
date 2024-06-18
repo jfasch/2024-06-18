@@ -1,6 +1,12 @@
 Exercise: Straightforward Build
 ===============================
 
+.. contents::
+   :local:
+
+Structure
+---------
+
 .. code-block:: console
 
     .
@@ -40,3 +46,47 @@ Exercise: Straightforward Build
             ├── sink-mock.h
             └── sink-terminal.h
     
+Generate Makefile Build
+-----------------------
+
+.. code-block:: console
+
+   $ pwd
+   /home/jfasch/My-Builds/2024-06-18-exercise-x86_64
+   $ cmake -DCMAKE_INSTALL_PREFIX=/home/jfasch/My-Installs/2024-06-18-exercise-x86_64 ~/My-Projects/2024-06-18/exercise/
+   ... roedel ...
+
+Build It
+--------
+
+.. code-block:: console
+
+   $ pwd
+   /home/jfasch/My-Builds/2024-06-18-exercise-x86_64
+   $ make
+   ... roedel ...
+
+Install It
+----------
+
+.. code-block:: console
+
+   $ pwd
+   /home/jfasch/My-Builds/2024-06-18-exercise-x86_64
+   $ make install
+   ...
+   -- Installing: /home/jfasch/My-Installs/2024-06-18-exercise-x86_64/bin/app-boiling-pot
+   ... roedel ...
+
+Build Shared Libraries
+----------------------
+
+.. code-block:: console
+
+   $ pwd
+   /home/jfasch/My-Builds/2024-06-18-exercise-x86_64
+   $ cmake -DBUILD_SHARED_LIBS=1 -DCMAKE_INSTALL_PREFIX=/home/jfasch/My-Installs/2024-06-18-exercise-x86_64 ~/My-Projects/2024-06-18/exercise/
+   ... roedel ...
+
+* ``make && make install``, etc. as usual
+

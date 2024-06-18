@@ -21,3 +21,19 @@ add_library(
 )
 
 target_include_directories(base INTERFACE .)
+install(TARGETS base DESTINATION lib)
+install(
+  FILES
+
+  hysteresis.h
+  sensor-avg.h
+  sensor-const.h
+  sensor.h
+  sensor-mock.h
+  sensor-random.h
+  sensor-w1.h
+  switch.h
+  switch-mock.h
+  sysfs-switch.h
+
+  DESTINATION include)
