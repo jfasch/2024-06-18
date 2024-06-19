@@ -23,5 +23,6 @@ install(
   sink-logger.h
   sink-mock.h
   sink-terminal.h
+  sink-MQTT.h
 
   DESTINATION include)

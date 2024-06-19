@@ -18,9 +18,17 @@ add_library(
   switch-mock.h
   sysfs-switch.cpp
   sysfs-switch.h
+
+  # MQTT
+  MQTT.h
+  MQTT_mock.h
+  MQTT_publisher.cpp
+  MQTT_publisher.h
 )
 
 target_include_directories(base INTERFACE .)
+target_link_libraries(base Mosquitto::Mosquitto)
+
 install(TARGETS base DESTINATION lib)
 install(
   FILES
@@ -35,5 +43,9 @@ install(
   switch.h
   switch-mock.h
   sysfs-switch.h
+
+  MQTT.h
+  MQTT_mock.h
+  MQTT_publisher.h
 
   DESTINATION include)

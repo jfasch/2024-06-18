@@ -17,6 +17,6 @@ class SinkLogger
 {
 public:
     virtual ~SinkLogger() {}
-    virtual void output(SensorValues data) = 0;
+    virtual void output(const SensorValues& data) = 0;
 
 };

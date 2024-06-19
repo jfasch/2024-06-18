@@ -2,6 +2,8 @@
 #include <sensor-random.h>
 #include <sink-terminal.h>
 #include <data-logger.h>
+#include <sink-MQTT.h>
+#include <MQTT_publisher.h>
 
 #include <map>
 #include <iostream>
@@ -21,7 +23,9 @@ int main()
     config.addSensor("tl", &top_left);
     config.addSensor("tr", &top_right);
     
-    SinkTerminal sink;
+    //SinkTerminal sink;
+    MQTTPublisher mqtt_pub("localhost", 1883, "2024-06-18");
+    SinkMQTT sink(mqtt_pub);
     DataLogger logger(&config, &sink, 1000/*ms*/);
     logger.startLogging();
 

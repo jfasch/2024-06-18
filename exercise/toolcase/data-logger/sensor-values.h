@@ -27,8 +27,8 @@ public:
     }
 
 
-    auto begin()       { return _measuredData.begin(); }
-    auto end()          { return _measuredData.end(); }
+    auto begin() const       { return _measuredData.begin(); }
+    auto end() const         { return _measuredData.end(); }
 
 private:
     std::map<std::string, float> _measuredData;
